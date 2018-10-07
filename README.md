@@ -33,7 +33,7 @@ Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
    - "local.py"
    - "production.py"
 - by adding this line:
-```ALLOWED_HOSTS = [u'ec2-54-214-186-191.us-west-2.compute.amazonaws.com:8000']```
+```ALLOWED_HOSTS = [u'ec2-54-214-186-191.us-west-2.compute.amazonaws.com']```
 
 # Run server:
  uwsgi --http :8000 --module tweetme.wsgi
