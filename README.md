@@ -15,7 +15,7 @@ Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 - virtualenv tweetme
 
 # install Django 1.11.15
-- pip install Django==1.10.8
+- pip install Django==1.11.15
 - pip install djangorestframework
 - pip install django-crispy-forms
 
