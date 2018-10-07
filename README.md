@@ -1,30 +1,30 @@
 # Create VM from AWS EC2
-Create a VM following this guide:
-https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/
+- Create a VM following this guide:
+   ```https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/```
 
 # Set up network rule
 Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 
 # Clone repo on Amazon Linux instance
-sudo yum upgrade
-sudo yum install git
-git clone https://github.com/qwang3q/tweetme.git
+- sudo yum upgrade
+- sudo yum install git
+- git clone https://github.com/qwang3q/tweetme.git
 
 
 # Set up virtualenv
-virtualenv tweetme
+- virtualenv tweetme
 
-# install Django 1.10.8
-pip install Django==1.10.8
-pip install djangorestframework
-pip install django-crispy-forms
+# install Django 1.11.15
+- pip install Django==1.10.8
+- pip install djangorestframework
+- pip install django-crispy-forms
 
 # run Django server
-python manage.py migrate
-python manage.py runserver
+- python manage.py migrate
+- python manage.py runserver
 
 # Set up uwsgi
-sudo yum install gcc gcc-c++ autoconf automake
+- sudo yum install gcc gcc-c++ autoconf automake
 pip install uwsgi
 
 # Allow host
