@@ -25,11 +25,15 @@ Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 
 # Set up uwsgi
 - sudo yum install gcc gcc-c++ autoconf automake
-pip install uwsgi
+- pip install uwsgi
 
 # Allow host
-under "tweetme/settings", edit "base.py", "local.py", "production.py", by adding this line:
-ALLOWED_HOSTS = [u'ec2-54-214-186-191.us-west-2.compute.amazonaws.com:8000']
+- under "tweetme/settings", edit 
+   - "base.py"
+   - "local.py"
+   - "production.py"
+- by adding this line:
+```ALLOWED_HOSTS = [u'ec2-54-214-186-191.us-west-2.compute.amazonaws.com:8000']```
 
 # Run server:
  uwsgi --http :8000 --module tweetme.wsgi
