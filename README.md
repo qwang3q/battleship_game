@@ -5,6 +5,9 @@
 # Set up network rule
 Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 
+# connect to server
+- ssh -i .ssh/MyKeyPair.pem ec2-user@{IP_Address}
+
 # Clone repo on Amazon Linux instance
 - sudo yum upgrade
 - sudo yum install git
