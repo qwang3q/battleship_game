@@ -38,8 +38,22 @@ Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 - by adding this line:
 ```ALLOWED_HOSTS = [u'ec2-54-214-186-191.us-west-2.compute.amazonaws.com']```
 
-# Run server:
- uwsgi --http :8000 --module tweetme.wsgi
+# Start a session in backgroud (So Django doesn't stop randomly)
+ ```screen```
+
+# Run Django server:
+ ```uwsgi --http :8000 --module tweetme.wsgi```
+ 
+# Make Django server run in background (detach session)
+press "Ctrl + a" then "Ctrl + d"
+
+# Connect to Django session (attach session)
+```screen -r```
+
+# Stop server
+- (Skip this if you have already attached session)After enter "screen -r", you should see server running
+- press "Ctrl + c"
+- press "Ctrl + a" then "Ctrl + k"
 
 # Install nginx
 sudo yum install nginx
