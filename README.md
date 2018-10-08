@@ -40,6 +40,9 @@ Add InBound Rule in Security groups: "Custom TCP Rule - Port 8000"
 
 # Start a session in backgroud (So Django doesn't stop randomly)
  ```screen```
+ 
+   Screen guide short: https://www.interserver.net/tips/kb/using-screen-to-attach-and-detach-console-sessions/
+   Screen guide long: https://kb.iu.edu/d/acuy
 
 # Run Django server:
  ```uwsgi --http :8000 --module tweetme.wsgi```
